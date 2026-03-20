@@ -153,6 +153,9 @@ const signOut = () => {
 <template>
   <div class="app-container">
     <header class="hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="/images/plants/vinevideo.mp4" type="video/mp4" />
+      </video>
       <div class="hero-content">
         <h1>🌿 Rare Indoor Plants 🌿</h1>
         <p>Discover the most beautiful and rare indoor plants for your home</p>
@@ -430,14 +433,30 @@ const signOut = () => {
 <style scoped>
 .app-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e9 100%);
+  background: linear-gradient(135deg, #daedda 0%, #a0dfa6 100%);
 }
 
 .hero {
-  background: linear-gradient(135deg, #2c5f2d 0%, #1b3a1c 100%);
+  position: relative;
   color: white;
   padding: 4rem 2rem;
   text-align: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content h1 {
