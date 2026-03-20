@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "dev": "npm run dev --prefix vscode/mock-store",
+    "build": "npm run build --prefix vscode/mock-store",
+    "preview": "npm run preview --prefix vscode/mock-store"
+  }
+}
